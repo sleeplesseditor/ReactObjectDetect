@@ -6,8 +6,14 @@ import { drawRect } from "./helpers/drawRect";
 import './App.css';
 
 function App() {
+  const [visible, setVisible] = React.useState(false);
+
   const webcamRef = React.useRef(null);
   const canvasRef = React.useRef(null);
+
+  const handleCamera = () => {
+    setVisible(!visible);
+  };
 
   const runCoco = async () => {
     const net = await cocossd.load();
@@ -45,7 +51,12 @@ function App() {
 
   return (
     <div className="App">
-      <Webcam
+      <div className="btn-container">
+        <button onClick={() => handleCamera()}>Activate Camera</button>
+      </div>
+      {visible ? (
+        <>
+        <Webcam
         ref={webcamRef}
         muted={true} 
         style={{
@@ -59,7 +70,7 @@ function App() {
           width: 640,
           height: 480,
         }}
-      />
+      />      
       <canvas
         ref={canvasRef}
         style={{
@@ -74,6 +85,8 @@ function App() {
           height: 480,
         }}
       />
+      </>
+      ) : null}
     </div>
   );
 }
