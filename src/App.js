@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import LazyLoader from './menu/LazyLoader/LazyLoader';
 import Menu from './menu/Menu';
 import { ReactComponent as CaretIcon } from './menu/Icons/caret.svg';
-import './App.css';
+import './App.scss';
 
 const ObjectDetectionPage = React.lazy(() => import('./pages/ObjectDetectionPage'));
 const SignDetectPage = React.lazy(() => import('./pages/SignDetectionPage'));

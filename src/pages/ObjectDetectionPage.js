@@ -3,7 +3,7 @@ import * as tf from "@tensorflow/tfjs";
 import * as cocossd from "@tensorflow-models/coco-ssd";
 import Webcam from "react-webcam";
 import { drawRect } from "../helpers/drawRect";
-import '../App.css';
+import '../App.scss';
 
 function ObjectDetectionPage() {
   const [visible, setVisible] = React.useState(false);
@@ -52,39 +52,39 @@ function ObjectDetectionPage() {
   return (
     <div className="App">
       <div className="btn-container">
-        <button onClick={() => handleCamera()}>{visible ? 'Deactivate' : 'Activate'} Camera</button>
+        <button className="camera-btn" onClick={() => handleCamera()}>{visible ? 'Deactivate' : 'Activate'} Camera</button>
       </div>
       {visible ? (
         <>
-        <Webcam
-          ref={webcamRef}
-          muted={true} 
-          style={{
-            position: "absolute",
-            marginLeft: "auto",
-            marginRight: "auto",
-            left: 0,
-            right: 0,
-            textAlign: "center",
-            zindex: 9,
-            width: 640,
-            height: 480,
-          }}
-        />      
-        <canvas
-          ref={canvasRef}
-          style={{
-            position: "absolute",
-            marginLeft: "auto",
-            marginRight: "auto",
-            left: 0,
-            right: 0,
-            textAlign: "center",
-            zindex: 8,
-            width: 640,
-            height: 480,
-          }}
-        />
+          <Webcam
+            ref={webcamRef}
+            muted={true} 
+            style={{
+              position: "absolute",
+              marginLeft: "auto",
+              marginRight: "auto",
+              left: 0,
+              right: 0,
+              textAlign: "center",
+              zindex: 9,
+              width: 640,
+              height: 480,
+            }}
+          />      
+          <canvas
+            ref={canvasRef}
+            style={{
+              position: "absolute",
+              marginLeft: "auto",
+              marginRight: "auto",
+              left: 0,
+              right: 0,
+              textAlign: "center",
+              zindex: 8,
+              width: 640,
+              height: 480,
+            }}
+          />
         </>
       ) : null}
     </div>
