@@ -1,0 +1,28 @@
+{
+	"menuTitles": [
+        {
+			"title": "Object Detection",
+			"icon": "objectIcon",
+			"link": "object"
+        }
+    ],
+    "subMenus": [
+        {
+            "activeMenu": "object",
+            "backIcon": "arrowIcon",
+            "menuTitle": "Object Detection",
+            "menuLinks": [
+                {
+                    "title": "Object Detection",
+                    "icon": "objectIcon",
+                    "link": "/"
+                },
+                {
+                    "title": "Sign Language Detection",
+                    "icon": "signIcon",
+                    "link": "/sign-detect"
+                }
+            ]
+        }
+    ]
+}
