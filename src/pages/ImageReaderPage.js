@@ -8,7 +8,6 @@ import './ImageReaderPage.scss';
 const ImageReaderPage = () => {
     const [model, setModel] = React.useState(null);
     const [preview, setPreview] = React.useState('');
-    const [predictions, setPredictions] = React.useState([]);
 
     React.useEffect(() => {
         cocoSsd.load().then(model => {
