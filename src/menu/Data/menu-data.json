@@ -13,6 +13,11 @@
             "menuTitle": "Object Detection",
             "menuLinks": [
                 {
+                    "title": "Image Reader",
+                    "icon": "objectIcon",
+                    "link": "/image"
+                },
+                {
                     "title": "Object Detection",
                     "icon": "objectIcon",
                     "link": "/"
