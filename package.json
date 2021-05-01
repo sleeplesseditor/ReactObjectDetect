@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@tensorflow-models/coco-ssd": "^2.2.1",
+    "@tensorflow-models/face-landmarks-detection": "0.0.3",
     "@tensorflow/tfjs": "^3.4.0",
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.6",

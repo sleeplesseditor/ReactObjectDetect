@@ -13,6 +13,11 @@
             "menuTitle": "Object Detection",
             "menuLinks": [
                 {
+                    "title": "Facial Landmark Detection",
+                    "icon": "faceIcon",
+                    "link": "/face"
+                },
+                {
                     "title": "Image Reader",
                     "icon": "objectIcon",
                     "link": "/image"
